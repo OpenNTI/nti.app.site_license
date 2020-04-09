@@ -1,0 +1,21 @@
+<!-- -*- mode: nxml -*- -->
+<configure  xmlns="http://namespaces.zope.org/zope"
+            xmlns:i18n="http://namespaces.zope.org/i18n"
+            xmlns:zcml="http://namespaces.zope.org/zcml"
+            xmlns:ext="http://nextthought.com/ntp/ext">
+
+    <include package="zope.component" file="meta.zcml" />
+    <include package="zope.security" file="meta.zcml" />
+    <include package="zope.component" />
+	<include package="zope.security" />
+
+    <!-- acl -->
+    <adapter factory=".acl.SiteLicenseACLProvider"
+             for="nti.site_license.interfaces.ISiteLicense"
+             provides="nti.dataserver.interfaces.IACLProvider"/>
+
+    <!-- Decorators -->
+	<adapter factory=".decorators.SiteAdminWorkspaceDecorator"
+			 for="nti.app.site.workspaces.interfaces.ISiteAdminWorkspace"
+			 provides="nti.externalization.interfaces.IInternalObjectExternalizer" />
+</configure>

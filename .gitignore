@@ -1,0 +1,15 @@
+*.py[cod]
+
+/.project
+/.pydevproject
+/.settings/
+
+# Distribution / packaging
+build/
+dist/
+/.tox/
+
+.coverage
+htmlcov/
+.DS_Store
+
