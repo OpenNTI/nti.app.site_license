@@ -16,6 +16,7 @@
 
     <!-- Decorators -->
 	<adapter factory=".decorators.SiteAdminWorkspaceDecorator"
-			 for="nti.app.site.workspaces.interfaces.ISiteAdminWorkspace"
+			 for="nti.app.site.workspaces.interfaces.ISiteAdminWorkspace
+			      pyramid.interfaces.IRequest"
 			 provides="nti.externalization.interfaces.IInternalObjectExternalizer" />
 </configure>
