@@ -39,4 +39,3 @@ def raise_error(data, tb=None,
 @view_config(context=ISiteLicense)
 class SiteLicenseView(GenericGetView):
     pass
-

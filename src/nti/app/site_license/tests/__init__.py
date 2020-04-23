@@ -20,7 +20,7 @@ from nti.testing.layers import ConfiguringLayerMixin
 
 class SharedConfiguringTestLayer(ApplicationTestLayer):
 
-    set_up_packages = ('nti.app.site_license')
+    set_up_packages = ('nti.app.site_license',)
 
     @classmethod
     def setUp(cls):
